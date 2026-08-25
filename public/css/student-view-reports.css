@@ -1,0 +1,1066 @@
+/* ===================================================
+   Student View Report – Custom Styles
+   =================================================== */
+
+/* ── Header Banner ───────────────────────────────── */
+.svr-header {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eef0f4;
+}
+
+.svr-header__avatar-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.svr-header__avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e8e4ff;
+}
+
+.svr-header__online-dot {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #22c55e;
+    border: 2px solid #fff;
+}
+
+.svr-header__meta {
+    flex: 1;
+}
+
+.svr-header__label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.svr-header__name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 6px 0;
+    line-height: 1.2;
+}
+
+.svr-header__badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.svr-header__id-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #f0edff;
+    color: var(--theme-color);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: none;
+    cursor: default;
+}
+
+.svr-header__id-chip:hover {
+    color: var(--theme-color);
+    text-decoration: none;
+}
+
+.svr-header__room-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.svr-header__room-badge i {
+    font-size: 11px;
+}
+
+.svr-header__action {
+    flex-shrink: 0;
+}
+
+.svr-btn-download {
+    background: linear-gradient(135deg, var(--theme-color), var(--theme-color));
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.svr-btn-download:hover {
+    opacity: 0.88;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ── Tab Strip ───────────────────────────────────── */
+.svr-tabs-wrapper {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #eef0f4;
+    border-top: none;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.svr-nav-tabs {
+    border-bottom: none;
+    gap: 4px;
+}
+
+.svr-nav-tabs .nav-item {
+    margin-bottom: 0;
+}
+
+.svr-nav-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 14px 18px 12px;
+    background: transparent;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.svr-nav-tabs .nav-link:hover {
+    color: var(--theme-color);
+    border-bottom-color: var(--theme-color);
+}
+
+.svr-nav-tabs .nav-link.active {
+    color: var(--theme-color);
+    border-bottom-color: var(--theme-color);
+    font-weight: 600;
+    background: transparent;
+}
+
+/* ── Tab Content Wrapper ────────────────────────── */
+.svr-tab-content {
+    background: transparent;
+    padding: unset !important;
+}
+
+/* ── Profile Tab ─────────────────────────────────── */
+.svr-info-panel {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    padding: 20px 24px;
+    height: 100%;
+}
+
+.svr-info-panel__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.svr-info-panel__title i {
+    color: var(--theme-color);
+    font-size: 16px;
+}
+
+.svr-field {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.svr-field:last-of-type {
+    border-bottom: none;
+}
+
+.svr-field__label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding-top: 2px;
+    line-height: 1.4;
+}
+
+.svr-field__value {
+    font-size: 13px;
+    color: #334155;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* ── Attendance Tab ──────────────────────────────── */
+.svr-stat-card {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.svr-stat-card__label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+}
+
+.svr-stat-card__value {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.svr-stat-card--total {
+    border-top: 3px solid #6c5ce7;
+}
+
+.svr-stat-card--total .svr-stat-card__value {
+    color: #6c5ce7;
+}
+
+.svr-stat-card--present {
+    border-top: 3px solid #22c55e;
+}
+
+.svr-stat-card--present .svr-stat-card__value {
+    color: #16a34a;
+}
+
+.svr-stat-card--absent {
+    border-top: 3px solid #ef4444;
+}
+
+.svr-stat-card--absent .svr-stat-card__value {
+    color: #dc2626;
+}
+
+.svr-stat-card--holiday {
+    border-top: 3px solid #64748b;
+}
+
+.svr-stat-card--holiday .svr-stat-card__value {
+    color: #475569;
+}
+
+.svr-stat-card--pct {
+    border-top: 3px solid #f59e0b;
+}
+
+.svr-stat-card--pct .svr-stat-card__value {
+    color: #d97706;
+}
+
+/* Attendance Calendar */
+.svr-cal-header-row,
+.svr-cal-body {
+    width: 100%;
+}
+
+.svr-cal-wrapper {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.svr-cal-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.svr-cal-top h6 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+}
+
+.svr-cal-month-select {
+    font-size: 13px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: #334155;
+    background: #f8fafc;
+}
+
+.svr-cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.svr-cal-grid__day-header {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    padding: 4px 0;
+}
+
+.svr-cal-cell {
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #334155;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    min-height: 38px;
+    padding: 4px 2px;
+    cursor: default;
+    transition: transform 0.1s;
+}
+
+.svr-cal-cell__num {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1;
+}
+
+.svr-cal-cell__status {
+    font-size: 9px;
+    font-weight: 700;
+    margin-top: 2px;
+    line-height: 1;
+}
+
+.svr-cal-cell--present {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+
+.svr-cal-cell--present .svr-cal-cell__num {
+    color: #15803d;
+}
+
+.svr-cal-cell--present .svr-cal-cell__status {
+    color: #16a34a;
+}
+
+.svr-cal-cell--absent {
+    background: #fef2f2;
+    border-color: #fecaca;
+}
+
+.svr-cal-cell--absent .svr-cal-cell__num {
+    color: #dc2626;
+}
+
+.svr-cal-cell--absent .svr-cal-cell__status {
+    color: #ef4444;
+}
+
+.svr-cal-cell--holiday {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+.svr-cal-cell--holiday .svr-cal-cell__num {
+    color: #1d4ed8;
+}
+
+.svr-cal-cell--holiday .svr-cal-cell__status {
+    color: #2563eb;
+}
+
+.svr-cal-cell--empty {
+    background: #f1f5f9;
+    border-color: #e2e8f0;
+    opacity: 0.4;
+}
+
+/* ── Exam Tab ────────────────────────────────────── */
+.svr-exam-section {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.svr-exam-section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: #f8fafc;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.svr-exam-section__name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+}
+
+.svr-status-chip {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.svr-status-chip--completed {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.svr-status-chip--not-attempted {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.svr-status-chip--fail {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.svr-exam-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.svr-exam-table thead th {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eef0f4;
+    background: #fff;
+}
+
+.svr-exam-table tbody td {
+    font-size: 13px;
+    color: #334155;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f8fafc;
+    vertical-align: middle;
+}
+
+.svr-exam-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.svr-exam-table tfoot td {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    padding: 12px 20px;
+    background: #f8fafc;
+    border-top: 1px solid #eef0f4;
+}
+
+.svr-pass-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.svr-pass-badge--pass {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.svr-pass-badge--fail {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* Online exams list style */
+.svr-online-exam-section {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.svr-online-exam-section__header {
+    padding: 12px 20px;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.svr-online-exam-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #6c5ce7;
+}
+
+.svr-online-exam-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    border-bottom: 1px solid #f8fafc;
+    gap: 14px;
+}
+
+.svr-online-exam-item:last-child {
+    border-bottom: none;
+}
+
+.svr-online-exam-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #f0edff;
+    color: #6c5ce7;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.svr-online-exam-info {
+    flex: 1;
+}
+
+.svr-online-exam-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.svr-online-exam-date {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.svr-online-exam-result {
+    text-align: right;
+}
+
+.svr-online-exam-pct {
+    font-size: 15px;
+    font-weight: 700;
+    color: #16a34a;
+}
+
+.svr-online-exam-grade {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+/* ── Fees Tab ────────────────────────────────────── */
+.svr-fees-panel {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.svr-fees-panel__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.svr-fees-panel__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+}
+
+.svr-fees-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.svr-fees-table thead th {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    padding: 10px 20px;
+    background: #fff;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.svr-fees-table tbody td {
+    font-size: 13px;
+    color: #334155;
+    padding: 14px 20px;
+    border-bottom: 1px solid #f8fafc;
+    vertical-align: middle;
+}
+
+.svr-fees-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.svr-fee-name {
+    font-weight: 500;
+    color: #1e293b;
+}
+
+.svr-fee-type {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+.svr-fee-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.svr-fee-badge--paid {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.svr-fee-badge--partial {
+    background: #fef9c3;
+    color: #a16207;
+}
+
+.svr-fee-badge--overdue {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.svr-fee-badge--unpaid {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+/* ── Transportation Tab ──────────────────────────── */
+.svr-transport-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .svr-transport-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.svr-transport-panel {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.svr-transport-panel__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    padding: 16px 20px 14px;
+    border-bottom: 1px solid #eef0f4;
+    margin: 0;
+}
+
+.svr-transport-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f8fafc;
+}
+
+.svr-transport-row:last-child {
+    border-bottom: none;
+}
+
+.svr-transport-row__label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    flex-shrink: 0;
+    padding-top: 1px;
+}
+
+.svr-transport-row__label i {
+    font-size: 12px;
+    color: var(--theme-color);
+}
+
+.svr-transport-row__value {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1e293b;
+    text-align: right;
+}
+
+/* Route panel – card-row layout */
+.svr-route-card-row {
+    padding: 14px 20px;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.svr-route-card-row:last-of-type {
+    border-bottom: none;
+}
+
+.svr-route-card-row__label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    margin-bottom: 4px;
+}
+
+.svr-route-card-row__value {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* Half-width cells inside the pickup row */
+.svr-route-card-half {
+    flex: 1;
+    padding: 14px 20px;
+}
+
+@media (max-width: 576px) {
+    .svr-route-card-row.d-flex {
+        flex-direction: column;
+    }
+
+    .svr-route-card-row.d-flex .svr-route-card-half {
+        border-right: none !important;
+        border-bottom: 1px solid #eef0f4;
+    }
+
+    .svr-route-card-row.d-flex .svr-route-card-half:last-child {
+        border-bottom: none;
+    }
+
+    .svr-route-card-half.d-flex {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+/* Shift Card */
+.svr-shift-card {
+    background: linear-gradient(135deg, #6c5ce7, #4f46e5);
+    border-radius: 12px;
+    padding: 20px;
+    color: #fff;
+    margin-top: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.svr-shift-card::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.svr-shift-card__label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 6px;
+}
+
+.svr-shift-card__name {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.svr-shift-times {
+    display: flex;
+    gap: 10px;
+}
+
+.svr-shift-time-pill {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.svr-shift-time-pill span {
+    display: block;
+    font-size: 10px;
+    opacity: 0.7;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+/* Driver / Helper cards */
+.svr-people-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 16px 20px;
+}
+
+@media (max-width: 576px) {
+    .svr-people-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.svr-person-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8fafc;
+    border: 1px solid #eef0f4;
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.svr-person-card__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e8e4ff;
+    flex-shrink: 0;
+}
+
+.svr-person-card__role {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--theme-color);
+    margin-bottom: 2px;
+}
+
+.svr-person-card__name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.svr-person-card__phone {
+    font-size: 11px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ── Month filter in attendance ──────────────────── */
+.svr-month-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.svr-month-filter label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* ── Loading state ───────────────────────────────── */
+.svr-loading {
+    text-align: center;
+    padding: 40px;
+    color: #94a3b8;
+}
+
+/* ── No data ─────────────────────────────────────── */
+.svr-no-data {
+    text-align: center;
+    padding: 40px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* ── General helpers ─────────────────────────────── */
+.svr-divider {
+    height: 1px;
+    background: #f1f5f9;
+    margin: 0;
+}
+
+.text-green {
+    color: #16a34a;
+}
+
+.text-red {
+    color: #dc2626;
+}
+
+/* ── Modal Styling ───────────────────────────────── */
+.svr-modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.svr-modal-header {
+    background: #f8fafc;
+    border-bottom: 1px solid #eef0f4;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.svr-modal-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.svr-modal-close {
+    background: rgba(226, 232, 240, 0.5);
+    border: none;
+    color: #64748b;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.svr-modal-close:hover {
+    background: #cbd5e1;
+    color: #1e293b;
+}
+
+.svr-modal-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.svr-modal-table th {
+    background: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #94a3b8;
+    padding: 14px 24px;
+    border-bottom: 2px solid #eef0f4;
+    letter-spacing: 0.5px;
+}
+
+.svr-modal-table td {
+    padding: 16px 24px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #475569;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+.svr-modal-table tbody tr:hover td {
+    background-color: #f8fafc;
+}
+
+.svr-modal-table tfoot th {
+    background: #f8fafc;
+    padding: 16px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    border-top: 2px solid #eef0f4;
+    text-transform: uppercase;
+}
+
+.svr-modal-total-amt {
+    color: #6c5ce7 !important;
+    font-size: 16px !important;
+}

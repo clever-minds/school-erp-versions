@@ -1,0 +1,1082 @@
+:root {
+    /* --rv-primary: #2563eb; */
+    --rv-primary: var(--theme-color);
+    /* Royal Blue */
+    /* --rv-primary-gradient: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); */
+    --rv-primary-gradient: linear-gradient(135deg, #1e40af 0%, var(--theme-color) 100%);
+    --rv-success: #10b981;
+    /* Emerald Green */
+    --rv-danger: #ef4444;
+    /* Red */
+    --rv-warning: #f59e0b;
+    /* Amber */
+    --rv-info: #3b82f6;
+    /* Sky Blue */
+    --rv-text-primary: #1e293b;
+    /* Slate 800 */
+    --rv-text-secondary: #64748b;
+    /* Slate 500 */
+    --rv-border: #f1f5f9;
+    /* Slate 100 */
+    --rv-bg-page: #f8fafc;
+    /* Slate 50 */
+    --rv-bg-card: #ffffff;
+    --rv-bg-input: #f8fafc;
+    --rv-radius: 16px;
+    --rv-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* ── Generic Improvements ─────────────────────────────────── */
+body {
+    color: var(--rv-text-primary);
+    background-color: var(--rv-bg-page);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ── Left Info Card ────────────────────────────────────────── */
+.rv-info-card {
+    border: none !important;
+    border-radius: var(--rv-radius) !important;
+    overflow: hidden;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.rv-info-card .card {
+    border-radius: var(--rv-radius);
+    border: none;
+    box-shadow: var(--rv-shadow);
+}
+
+.rv-card-header {
+    background: var(--rv-primary-gradient) !important;
+    color: white;
+    border-radius: var(--rv-radius) var(--rv-radius) 0 0 !important;
+    position: relative;
+}
+
+.rv-bus-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(8px);
+    border-radius: 10px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem !important;
+    margin-bottom: 0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.rv-shift-badge {
+    text-align: right;
+}
+
+.rv-shift-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.8;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.rv-route-title-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.8;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.rv-route-name {
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.rv-route-zone {
+    font-size: 13px;
+    opacity: 0.9;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ── Stats Grid ─────────────────────────────────────────────── */
+.rv-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 2rem;
+    background: #fff !important;
+    border-bottom: none !important;
+}
+
+.rv-stat-item {
+    background: #f8fafc !important;
+    border-radius: 12px !important;
+    padding: 1.25rem !important;
+    border: none !important;
+    text-align: left !important;
+}
+
+.rv-stat-label {
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #94a3b8 !important;
+    margin-bottom: 8px !important;
+}
+
+.rv-stat-value {
+    font-size: 1.1rem !important;
+    font-weight: 800 !important;
+    color: var(--rv-text-primary) !important;
+}
+
+.rv-stat-value small {
+    font-size: 12px;
+    font-weight: 600;
+    color: #94a3b8;
+    margin-left: 4px;
+}
+
+.rv-stat-item .rv-stat-value {
+    font-size: 18px;
+    /* Slightly larger */
+    font-weight: 800;
+    /* Bolder */
+    color: #1a237e;
+    letter-spacing: -0.5px;
+}
+
+/* ── Operational Schedule ───────────────────────────────────── */
+.rv-schedule-section {
+    padding: 0rem 2rem !important;
+    background: #fff !important;
+    border-bottom: none !important;
+}
+
+.rv-schedule-label {
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #94a3b8 !important;
+    margin-bottom: 1rem !important;
+}
+
+.rv-schedule-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px !important;
+}
+
+.rv-schedule-item {
+    background: #f8fafc !important;
+    border-radius: 12px !important;
+    padding: 1rem !important;
+    border: none !important;
+}
+
+.rv-schedule-item-label {
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #abaeb3 !important;
+    margin-bottom: 4px !important;
+}
+
+.rv-time-green {
+    font-size: 1.1rem !important;
+    font-weight: 800 !important;
+    color: #10b981 !important;
+}
+
+.rv-time-blue {
+    font-size: 1.1rem !important;
+    font-weight: 800 !important;
+    color: var(--theme-color) !important;
+}
+
+/* ── Assigned Staff ─────────────────────────────────────────── */
+.rv-staff-section {
+    padding: 0 2rem 2rem !important;
+    background: #fff !important;
+}
+
+.rv-section-label {
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #94a3b8 !important;
+    margin-bottom: 1rem !important;
+}
+
+.rv-staff-row {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.25rem !important;
+    border-radius: 12px !important;
+    background: #f8fafc !important;
+    margin-bottom: 12px !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: transform 0.2s;
+}
+
+.rv-staff-row:hover {
+    transform: translateY(-2px);
+}
+
+.rv-staff-row:last-child {
+    margin-bottom: 0 !important;
+}
+
+.rv-staff-avatar,
+.rv-avatar-circle {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 50% !important;
+    object-fit: cover;
+    border: 2px solid #fff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.rv-staff-info {
+    flex: 1;
+    margin-left: 12px !important;
+}
+
+.rv-staff-name {
+    font-size: 0.95rem !important;
+    font-weight: 800 !important;
+    color: var(--rv-text-primary) !important;
+    margin-bottom: 2px !important;
+}
+
+.rv-staff-meta {
+    font-size: 0.8rem !important;
+    color: #94a3b8 !important;
+    margin: 0 !important;
+}
+
+.rv-staff-badge {
+    padding: 6px 12px !important;
+    border-radius: 8px !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rv-staff-badge.driver {
+    background: #eff6ff !important;
+    color: var(--theme-color) !important;
+}
+
+.rv-staff-badge.helper {
+    background: #f8fafc !important;
+    color: #64748b !important;
+    border: 1px solid #e2e8f0;
+}
+
+/* ── Section Title ──────────────────────────────────────────── */
+.rv-section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #8a94a6;
+    margin-bottom: 12px;
+}
+
+/* ── Tab Nav (Pill Style) ───────────────────────────────────── */
+.rv-tab-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-bottom: 1px solid #e8eaf0;
+    padding-bottom: 16px;
+    margin-bottom: 0;
+}
+
+.rv-tab-nav .rv-tab-item {
+    list-style: none;
+}
+
+.rv-tab-nav .rv-tab-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #64748b !important;
+    /* Ensure color is not overridden by .nav-link */
+    background: #fff;
+    border: 1.5px solid #e2e8f0;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+}
+
+.rv-tab-nav .rv-tab-link:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #1e293b;
+}
+
+.rv-tab-nav .rv-tab-link.active {
+    background: var(--theme-color) !important;
+    color: #fff !important;
+    border-color: var(--theme-color) !important;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+}
+
+.rv-tab-nav .rv-tab-link i {
+    font-size: 14px;
+}
+
+/* ── Pickup Points Timeline ─────────────────────────────────── */
+.rv-stops-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.rv-stops-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e2a4a;
+    margin: 0;
+}
+
+.rv-stops-count {
+    font-size: 12px;
+    color: #64748b;
+    background: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.rv-timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.rv-timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e2e8f0;
+    border-radius: 2px;
+}
+
+.rv-timeline-item {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+/* The circle indicator */
+.rv-timeline-item::before {
+    content: '';
+    position: absolute;
+    /* Math: 
+       Line at 8px, width 2px -> center at 9px.
+       Container padding 40px -> Item starts at 40px.
+       Circle width 14px -> center at 7px from circle start.
+       We want circle center at 9px (absolute).
+       40 + left + 7 = 9 => left = -38px.
+    */
+    left: -38px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2.5px solid var(--theme-color);
+    z-index: 2;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rv-timeline-item:hover::before {
+    transform: translateY(-50%) scale(1.2);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.rv-timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Active line effect for first few if needed, but here we just want solid centering */
+.rv-timeline-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    transition: all 0.2s;
+}
+
+.rv-timeline-card:hover {
+    box-shadow: 0 2px 10px rgba(37, 65, 178, 0.10);
+}
+
+.rv-timeline-card .rv-stop-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e2a4a;
+    margin: 0;
+}
+
+.rv-timeline-card .rv-stop-seq {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #8a94a6;
+    margin: 0;
+}
+
+.rv-timeline-card .rv-stop-times {
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.rv-time-col {
+    text-align: right;
+}
+
+.rv-time-col .rv-time-col-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #8a94a6;
+    display: block;
+}
+
+.rv-time-col .rv-time-col-value {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--theme-color);
+}
+
+/* ── Reported Issues Card Redesign ─────────────────────────── */
+.reported-issues-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 1rem;
+}
+
+.issue-card {
+    background: #fff;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: 1.25rem;
+    display: flex;
+    gap: 20px;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.issue-card:hover {
+    border-color: #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.issue-icon-container {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.icon-warning {
+    background: #fff7ed;
+    color: #f97316;
+}
+
+.icon-info {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.icon-danger {
+    background: #fef2f2;
+    color: #ef4444;
+}
+
+.issue-content {
+    flex-grow: 1;
+}
+
+.issue-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.issue-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.issue-priority-badge {
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.priority-high {
+    background: #ffedd5;
+    color: #9a3412;
+}
+
+.priority-medium {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.priority-critical {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.issue-description {
+    font-size: 13.5px;
+    color: #475569;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.issue-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.meta-item i {
+    font-size: 12px;
+}
+
+.view-details-link {
+    color: #3b82f6;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+.view-details-link:hover {
+    text-decoration: underline;
+}
+
+/* Issues Header Area */
+.issues-header-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.issues-search-container {
+    position: relative;
+    width: 280px;
+}
+
+.issues-search-container i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+.issues-search-input {
+    width: 100%;
+    padding: 8px 12px 8px 36px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.issues-search-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.report-new-btn {
+    background: #dc2626;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.report-new-btn:hover {
+    background: #b91c1c;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* RTL Fixes */
+:dir(rtl) .rv-timeline {
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+:dir(rtl) .rv-timeline::before {
+    left: auto;
+    right: 8px;
+}
+
+:dir(rtl) .rv-timeline-item::before {
+    left: auto;
+    right: -25px;
+}
+
+:dir(rtl) .rv-staff-info {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+:dir(rtl) .rv-staff-badge {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+:dir(rtl) .rv-time-col {
+    text-align: left;
+}
+
+:dir(rtl) .monthlyAttendanceDateSection {
+    direction: rtl;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+:dir(rtl) .ms-3 {
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+}
+
+:dir(rtl) .legend-item i {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+/* ── Attendance & Trip Shared Styles ───────────────────────── */
+.attendance-summary-header {
+    margin-bottom: 1.5rem;
+}
+
+.attendance-legends {
+    font-size: 0.8rem;
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    /* Standardizing spacing */
+}
+
+.legend-item i {
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.btn-outline-successed {
+    color: #3e4b5b;
+    border-color: transparent !important;
+}
+
+.btn-outline-successed.active {
+    background-color: #37c978 !important;
+    color: #fff !important;
+    border-color: transparent !important;
+}
+
+.attendance-table th {
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 10px 5px;
+    background-color: #f8fafc;
+    color: #475569;
+    font-weight: 600;
+}
+
+.attendance-table td {
+    padding: 8px 5px;
+    vertical-align: middle;
+}
+
+.monthlyAttendanceDateSection {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.current-month {
+    font-size: 0.9rem;
+    color: #1e293b;
+}
+
+/* Trip Details info boxes */
+.trip-info-box {
+    padding: 1.25rem;
+    border-radius: var(--rv-radius);
+    background: var(--rv-bg-card);
+    border: 1px solid var(--rv-border);
+    transition: all 0.3s ease;
+}
+
+.trip-info-box:hover {
+    box-shadow: var(--rv-shadow);
+}
+
+.trip-info-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--rv-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.trip-info-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--rv-primary);
+}
+
+.trip-info-status {
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ── Sticky Table Enhancement ────────────────────────────── */
+.rv-sticky-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--rv-border);
+}
+
+.attendance-table {
+    margin-bottom: 0 !important;
+}
+
+.attendance-table thead th {
+    position: sticky;
+    top: 0;
+    background: #f8f9fa;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.attendance-table td:first-child,
+.attendance-table th:first-child {
+    position: sticky;
+    left: 0;
+    background: #fff;
+    z-index: 11;
+    min-width: 200px;
+    border-right: 2px solid #edf2f7 !important;
+}
+
+.attendance-table thead th:first-child {
+    z-index: 12;
+    background: #f8f9fa;
+}
+
+/* Status Colors for Attendance */
+.att-status-p {
+    color: var(--rv-success);
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.att-status-a {
+    color: #d93025;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.att-status-h {
+    color: #1a73e8;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.att-status-n {
+    color: #80868b;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+/* ── Avatar Circle Style ─────────────────────────────────── */
+.rv-avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rv-user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ── Trip Status Badges ───────────────────────────────────── */
+.badge-ongoing {
+    background: #e8f0fe;
+    color: #1a73e8;
+}
+
+.badge-completed {
+    background: #e6f4ea;
+    color: #137333;
+}
+
+.badge-pending {
+    background: #fef7e0;
+    color: #b06000;
+}
+
+/* ── Trip Performance Section ────────────────────────────── */
+.trip-performance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.trip-performance-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--rv-text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.trip-performance-subtitle {
+    font-size: 0.875rem;
+    color: var(--rv-text-secondary);
+}
+
+.trip-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rv-date-selector {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--rv-text-secondary);
+    min-width: 160px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.rv-download-btn {
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--rv-text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.rv-download-btn:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: var(--rv-primary);
+}
+
+.trip-card-icon {
+    width: 28px;
+    height: 28px;
+    background: #f1f5f9;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--rv-primary);
+}
+
+/* Redesign for Pickup/Drop Cards */
+.trip-details-card {
+    border: 1px solid #f1f5f9;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.trip-details-card .card-header {
+    background: transparent;
+    padding: 1.75rem 2rem 1.25rem;
+    border-bottom: none;
+}
+
+.trip-details-card .card-body {
+    padding: 0 2rem 2rem;
+}
+
+.trip-table-modern thead th {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: normal;
+    color: #94a3b8;
+    padding: 1rem 0.5rem;
+    border-top: none;
+    border-bottom: 1px solid #f1f5f9 !important;
+    border-right: 1px solid #f1f5f9 !important;
+    background: #fcfdfe;
+}
+
+.trip-table-modern thead th:last-child {
+    border-right: none !important;
+}
+
+.trip-table-modern tbody td {
+    padding: 1rem 0.5rem;
+    font-size: 13px;
+    color: #334155;
+    vertical-align: middle;
+    border-bottom: 1px solid #f1f5f9 !important;
+    border-right: 1px solid #f1f5f9 !important;
+}
+
+.trip-table-modern tbody td .font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.trip-table-modern tbody td:last-child {
+    border-right: none !important;
+}
+
+.trip-table-modern tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+.trip-table-modern-container {
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.trip-type-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--rv-primary);
+}
+
+/* ── RTL Fixes Continued ─────────────────────────────────────── */
+:dir(rtl) .legend-item {
+    margin-right: 0;
+    margin-left: 1.5rem;
+}
+
+:dir(rtl) .legend-item i {
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+/* ── Additional Refinements ─────────────────────────────────── */
+.rv-year-badge {
+    background: #e6f4ea;
+    color: #137333;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.rv-tab-link {
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    border-radius: 30px !important;
+    transition: all 0.2s !important;
+}
+
+.rv-tab-link.active {
+    background: var(--rv-primary) !important;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}

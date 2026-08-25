@@ -1,0 +1,114 @@
+<?php
+
+namespace App\Models;
+
+use App\Models\FeesClassType;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Traits\DateFormatTrait;
+use App\Services\CachingService;
+
+
+class FeesPaid extends Model
+{
+    use HasFactory, DateFormatTrait;
+    use SoftDeletes;
+
+    protected $fillable = [
+        'fees_id',
+        'student_id',
+        'class_id',
+        'is_fully_paid',
+        'is_used_installment',
+        'amount',
+        'date',
+        'school_id'
+    ];
+
+    protected $appends = ['original_date'];
+
+
+    public function student()
+    {
+        return $this->belongsTo(User::class, 'student_id')->withTrashed();
+    }
+
+    public function class()
+    {
+        return $this->belongsTo(ClassSchool::class, 'class_id')->with('medium')->withTrashed();
+    }
+
+    public function fees()
+    {
+        return $this->belongsTo(Fee::class, 'fees_id')->withTrashed();
+    }
+
+    public function optional_fee()
+    {
+        return $this->hasMany(OptionalFee::class, 'fees_paid_id')->withTrashed();
+    }
+
+    public function compulsory_fee()
+    {
+        return $this->hasMany(CompulsoryFee::class, 'fees_paid_id')->withTrashed();
+    }
+
+    /*It is used in Fees Receipt view file*/
+    //    public function getCompulsoryDataAttribute() {
+    //        if ($this->relationLoaded('compulsory_fee')) {
+    //            if($this->compulsory_fee->where('type',"1")){
+    //                return FeesClassType::where(['fees_id' => $this->fees_id, 'class_id' => $this->class_id, 'optional' => "0"])->with('fees_type')->get();
+    //            }
+    //        }
+    //        return null;
+    //    }
+
+    public function scopeOwner($query)
+    {
+        if (Auth::user()) {
+            if (Auth::user()->hasRole('Super Admin')) {
+                return $query;
+            }
+
+            $sessionYearId = app(CachingService::class)->getSessionYear()->id;
+            if (Auth::user()->hasRole('School Admin') || Auth::user()->hasRole('Teacher')) {
+                return $query->where('school_id', Auth::user()->school_id)->whereHas('fees', function ($q) use ($sessionYearId) {
+                    $q->where('session_year_id', $sessionYearId);
+                });
+            }
+
+            if (Auth::user()->hasRole('Student')) {
+                return $query->where('school_id', Auth::user()->school_id)->whereHas('fees', function ($q) use ($sessionYearId) {
+                    $q->where('session_year_id', $sessionYearId);
+                });
+            }
+
+            if (Auth::user()->hasRole('Guardian')) {
+                return $query->where('school_id', Auth::user()->school_id);
+            }
+        }
+
+        return $query;
+    }
+    public function getCreatedAtAttribute()
+    {
+        return $this->formatDateValue($this->getRawOriginal('created_at'));
+    }
+
+    public function getUpdatedAtAttribute()
+    {
+        return $this->formatDateValue($this->getRawOriginal('updated_at'));
+    }
+
+    public function getDateAttribute($value)
+    {
+        return $this->formatDateOnly($value);
+    }
+
+    public function getOriginalDateAttribute()
+    {
+        return $this->getRawOriginal('date');
+    }
+}

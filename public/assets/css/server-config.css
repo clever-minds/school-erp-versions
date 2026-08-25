@@ -1,0 +1,717 @@
+/* ============================================================
+   Server Configuration Check — server-config.css
+   ============================================================ */
+
+/* ---- Page root layout ---- */
+.server-config-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    /* min-height: calc(100vh - 60px); */
+    background: #f0f2f5;
+}
+
+/* ---- Left main panel ---- */
+.server-config-main {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+/* ---- Page header card ---- */
+.server-config-header {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.75rem 2rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .06);
+    flex-wrap: wrap;
+}
+
+.server-config-header-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4f8ef7 0%, #2563eb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.server-config-header-icon i {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.server-config-header-text h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 .3rem;
+}
+
+.server-config-header-text p {
+    font-size: .83rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* ---- Requirement cards (accordion) ---- */
+.requirement-card {
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .06);
+    border: 2px solid transparent;
+    transition: border-color .25s ease;
+    overflow: hidden;
+}
+
+.requirement-card.is-expanded {
+    border-color: #2563eb;
+}
+
+.requirement-card.check-passed {
+    border-color: #22c55e;
+}
+
+.requirement-card.check-failed {
+    border-color: #ef4444;
+}
+
+/* Card header row */
+.requirement-card-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    user-select: none;
+    gap: .9rem;
+}
+
+.requirement-card-header-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.requirement-card-header-icon i {
+    font-size: 1.05rem;
+    color: #2563eb;
+}
+
+.requirement-card-header-info {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.requirement-card-header-info h6 {
+    font-size: .93rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 .15rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.badge-required {
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+    border-radius: 4px;
+    padding: 1px 7px;
+}
+
+.requirement-card-header-info p {
+    font-size: .78rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.requirement-card-status {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    flex-shrink: 0;
+}
+
+.check-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #cbd5e1;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .7rem;
+    color: transparent;
+    transition: all .25s ease;
+}
+
+.check-circle.passed {
+    border-color: #22c55e;
+    background: #22c55e;
+    color: #fff;
+}
+
+.check-circle.failed {
+    border-color: #ef4444;
+    background: #ef4444;
+    color: #fff;
+}
+
+.chevron-icon {
+    font-size: 1rem;
+    color: #94a3b8;
+    transition: transform .3s ease;
+}
+
+.is-expanded .chevron-icon {
+    transform: rotate(180deg);
+}
+
+/* Card body */
+.requirement-card-body {
+    display: none;
+    padding: 0 1.25rem 1.25rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.requirement-card-body.open {
+    display: block;
+}
+
+/* Info alert inside card */
+.req-info-alert {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: .75rem 1rem;
+    font-size: .8rem;
+    color: #92400e;
+    display: flex;
+    align-items: flex-start;
+    gap: .6rem;
+    margin-bottom: 1rem;
+    margin-top: .75rem;
+}
+
+.req-info-alert i {
+    font-size: 1rem;
+    color: #d97706;
+    margin-top: 1px;
+    flex-shrink: 0;
+}
+
+.req-info-alert code {
+    background: rgba(0, 0, 0, .06);
+    border-radius: 3px;
+    padding: 0 4px;
+    font-size: .78rem;
+}
+
+/* DB form grid */
+.db-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .9rem 1.25rem;
+}
+
+.db-form-grid .form-group {
+    margin: 0;
+}
+
+.db-form-grid label {
+    font-size: .78rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: .3rem;
+    display: block;
+}
+
+.db-form-grid .form-control {
+    font-size: .84rem;
+    border-radius: 7px;
+    border-color: #d1d5db;
+    height: 38px;
+}
+
+.db-form-grid .form-control:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .12);
+}
+
+.btn-test-connection {
+    margin-top: .9rem;
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: .83rem;
+    font-weight: 600;
+    padding: .55rem 1.25rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    transition: opacity .2s ease, transform .15s ease;
+}
+
+.btn-test-connection:hover:not(:disabled) {
+    opacity: .88;
+    transform: translateY(-1px);
+}
+
+.btn-test-connection:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+/* Queue info box */
+.queue-info-box {
+    margin-top: .75rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    border: 1px solid #e2e8f0;
+}
+
+.queue-info-box p {
+    font-size: .8rem;
+    color: #475569;
+    margin-bottom: .6rem;
+}
+
+.queue-info-box code {
+    display: block;
+    background: #1e293b;
+    color: #7dd3fc;
+    border-radius: 6px;
+    padding: .6rem .9rem;
+    font-size: .775rem;
+    margin-top: .35rem;
+}
+
+.btn-test-queue {
+    margin-top: .9rem;
+    background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: .83rem;
+    font-weight: 600;
+    padding: .55rem 1.25rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    transition: opacity .2s ease, transform .15s ease;
+}
+
+.btn-test-queue:hover:not(:disabled) {
+    opacity: .88;
+    transform: translateY(-1px);
+}
+
+.btn-test-queue:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+/* ---- Right sidebar ---- */
+.server-config-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* System Health card */
+.system-health-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem 1.25rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .06);
+}
+
+.system-health-card h6 {
+    font-size: .78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #94a3b8;
+    margin: 0 0 1.1rem;
+}
+
+/* Gauge circle */
+.health-gauge-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.1rem;
+}
+
+.health-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f59e0b;
+    margin-bottom: .6rem;
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, .18);
+    transition: background .4s ease, box-shadow .4s ease;
+}
+
+.health-dot.all-passed {
+    background: #22c55e;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, .18);
+}
+
+.health-gauge-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 7px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #fff;
+    transition: border-color .4s ease;
+}
+
+.health-gauge-circle.some-passed {
+    border-color: #f59e0b;
+}
+
+.health-gauge-circle.all-passed {
+    border-color: #22c55e;
+}
+
+.health-gauge-score {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1;
+}
+
+.health-gauge-label {
+    font-size: .6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+/* Setup status alert */
+.setup-status-alert {
+    border-radius: 8px;
+    padding: .7rem .9rem;
+    font-size: .78rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: .55rem;
+}
+
+.setup-status-alert.incomplete {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    color: #92400e;
+}
+
+.setup-status-alert.complete {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+}
+
+.setup-status-alert i {
+    font-size: .95rem;
+    margin-top: 1px;
+    flex-shrink: 0;
+}
+
+.setup-status-alert strong {
+    display: block;
+    font-size: .8rem;
+    margin-bottom: 2px;
+}
+
+/* Go to Dashboard button */
+.btn-go-dashboard {
+    width: 100%;
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: .85rem;
+    font-weight: 600;
+    padding: .65rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .45rem;
+    cursor: pointer;
+    transition: opacity .2s ease, transform .15s ease;
+}
+
+.btn-go-dashboard:hover:not(:disabled) {
+    opacity: .88;
+    transform: translateY(-1px);
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-go-dashboard:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+/* System Output terminal */
+.system-output-card {
+    background: #161b22;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+}
+
+.system-output-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .6rem 1rem;
+    background: #21262d;
+}
+
+.system-output-header span {
+    font-size: .72rem;
+    font-weight: 600;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+}
+
+.btn-clear-output {
+    background: transparent;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    color: #8b949e;
+    font-size: .7rem;
+    padding: 1px 8px;
+    cursor: pointer;
+    transition: color .2s, border-color .2s;
+}
+
+.btn-clear-output:hover {
+    color: #e6edf3;
+    border-color: #8b949e;
+}
+
+.system-output-body {
+    padding: .75rem 1rem;
+    font-family: 'Cascadia Code', 'Fira Mono', 'Consolas', monospace;
+    font-size: .71rem;
+    color: #7dc4e7;
+    min-height: 160px;
+    max-height: 260px;
+    overflow-y: auto;
+    line-height: 1.65;
+    word-break: break-all;
+    scrollbar-width: thin;
+    scrollbar-color: #30363d transparent;
+}
+
+.system-output-body::-webkit-scrollbar {
+    width: 4px;
+}
+
+.system-output-body::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 4px;
+}
+
+.output-line {
+    display: block;
+}
+
+.output-line.ok {
+    color: #56d364;
+}
+
+.output-line.info {
+    color: #7dc4e7;
+}
+
+.output-line.warn {
+    color: #e3b341;
+}
+
+.output-line.error {
+    color: #f85149;
+}
+
+.output-waiting {
+    color: #484f58;
+    font-style: italic;
+}
+
+/* ---- Responsive ---- */
+
+/* --- Tablet / small desktop: sidebar moves below main --- */
+@media (max-width: 1024px) {
+    .server-config-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .server-config-sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .system-health-card,
+    .system-output-card {
+        flex: 1 1 280px;
+        min-width: 0;
+    }
+}
+
+/* --- Medium mobile: tighten header and card padding --- */
+@media (max-width: 768px) {
+    .server-config-header {
+        padding: 1.1rem 1.2rem;
+        gap: .9rem;
+    }
+
+    .server-config-header-text h4 {
+        font-size: 1rem;
+    }
+
+    /* Re-run button gets its own row when space is tight */
+    .server-config-header .ml-auto {
+        width: 100%;
+        display: flex;
+    }
+
+    .server-config-header .ml-auto .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Card header: allow wrapping so status icons stay visible */
+    .requirement-card-header {
+        flex-wrap: wrap;
+        gap: .6rem;
+        padding: .85rem 1rem;
+    }
+
+    /* Status always on its own right-aligned row when wrapped */
+    .requirement-card-status {
+        margin-left: auto;
+    }
+
+    /* DB form grid: 2 cols still fits on 768+ but tighten gap */
+    .db-form-grid {
+        gap: .7rem 1rem;
+    }
+
+    .system-health-card,
+    .system-output-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* --- Small mobile: single-column everything --- */
+@media (max-width: 576px) {
+    .server-config-wrapper {
+        padding: .75rem;
+        gap: .75rem;
+    }
+
+    .server-config-header {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .server-config-header-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .db-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .server-config-sidebar {
+        flex-direction: column;
+        gap: .75rem;
+    }
+
+    .requirement-card {
+        border-radius: 10px;
+    }
+
+    .requirement-card-header {
+        padding: .8rem .9rem;
+    }
+
+    .requirement-card-body {
+        padding: 0 .9rem .9rem;
+    }
+
+    .btn-test-connection,
+    .btn-test-queue {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .queue-info-box code {
+        font-size: .7rem;
+        word-break: break-all;
+    }
+}
+
+/* --- Extra-small mobile (≤420px): micro adjustments --- */
+@media (max-width: 420px) {
+    .server-config-header-text h4 {
+        font-size: .9rem;
+    }
+
+    .server-config-header-text p {
+        font-size: .76rem;
+    }
+
+    .requirement-card-header-info h6 {
+        font-size: .85rem;
+    }
+
+    .health-gauge-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .health-gauge-score {
+        font-size: 1.25rem;
+    }
+}

@@ -1,0 +1,59 @@
+/* ============================================================
+   System Health Page — health.css
+   Supplements server-config.css with overrides for the
+   settings layout where it lives (not a full-screen wizard).
+   ============================================================ */
+
+/* Remove the full-screen page background tint */
+.content-wrapper .server-config-wrapper {
+    background: transparent;
+    padding: 0;
+}
+
+/* Re-run all button spacing */
+.server-config-header .ml-auto {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* Health gauge label — hide the "Checks Passed" text since we show it in header */
+.health-gauge-label {
+    display: none;
+}
+
+/* Slightly smaller sidebar on settings layout */
+@media (min-width: 1025px) {
+    .content-wrapper .server-config-sidebar {
+        width: 280px;
+    }
+}
+
+/* ---- Settings-layout responsive overrides ---- */
+
+/* On mobile the wrapper has no extra outer padding — reset to sensible value */
+@media (max-width: 768px) {
+    .content-wrapper .server-config-wrapper {
+        padding: 0;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .content-wrapper .server-config-wrapper {
+        padding: 0;
+        gap: .75rem;
+    }
+
+    /* Re-run button: full-width pill on mobile */
+    .server-config-header .ml-auto {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .server-config-header .ml-auto .btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

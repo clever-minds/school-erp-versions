@@ -1,0 +1,1144 @@
+/* ===================================================
+   Student View Report – Custom Styles
+   =================================================== */
+
+/* ── Header Banner ───────────────────────────────── */
+.tvr-header {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eef0f4;
+}
+
+.tvr-header__avatar-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.tvr-header__avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e8e4ff;
+}
+
+.tvr-header__online-dot {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #22c55e;
+    border: 2px solid #fff;
+}
+
+.tvr-header__meta {
+    flex: 1;
+}
+
+.tvr-header__label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.tvr-header__name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 6px 0;
+    line-height: 1.2;
+}
+
+.tvr-header__badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tvr-header__id-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #f0edff;
+    color: var(--theme-color);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: none;
+    cursor: default;
+}
+
+.tvr-header__id-chip:hover {
+    color: var(--theme-color);
+    text-decoration: none;
+}
+
+.tvr-header__room-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.tvr-header__room-badge i {
+    font-size: 11px;
+}
+
+.tvr-header__action {
+    flex-shrink: 0;
+}
+
+.tvr-btn-download {
+    background: linear-gradient(135deg, var(--theme-color), var(--theme-color));
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.tvr-btn-download:hover {
+    opacity: 0.88;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ── Tab Strip ───────────────────────────────────── */
+.tvr-tabs-wrapper {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #eef0f4;
+    border-top: none;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.tvr-nav-tabs {
+    border-bottom: none;
+    gap: 4px;
+}
+
+.tvr-nav-tabs .nav-item {
+    margin-bottom: 0;
+}
+
+.tvr-nav-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 14px 18px 12px;
+    background: transparent;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.tvr-nav-tabs .nav-link:hover {
+    color: var(--theme-color);
+    border-bottom-color: var(--theme-color);
+}
+
+.tvr-nav-tabs .nav-link.active {
+    color: var(--theme-color);
+    border-bottom-color: var(--theme-color);
+    font-weight: 600;
+    background: transparent;
+}
+
+/* ── Tab Content Wrapper ────────────────────────── */
+.tvr-tab-content {
+    background: transparent;
+    padding: unset !important;
+}
+
+/* ── Profile Tab ─────────────────────────────────── */
+.tvr-info-panel {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    padding: 20px 24px;
+}
+
+.tvr-info-panel__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.tvr-info-panel__title i {
+    color: var(--theme-color);
+    font-size: 16px;
+}
+
+.tvr-field {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.tvr-field:last-of-type {
+    border-bottom: none;
+}
+
+.tvr-field__label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding-top: 2px;
+    line-height: 1.4;
+}
+
+.tvr-field__value {
+    font-size: 13px;
+    color: #334155;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* ── Attendance Tab ──────────────────────────────── */
+.tvr-stat-card {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.tvr-stat-card__label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+}
+
+.tvr-stat-card__value {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.tvr-stat-card--total {
+    border-top: 3px solid var(--theme-color);
+}
+
+.tvr-stat-card--total .tvr-stat-card__value {
+    color: var(--theme-color);
+}
+
+.tvr-stat-card--present {
+    border-top: 3px solid #22c55e;
+}
+
+.tvr-stat-card--present .tvr-stat-card__value {
+    color: #16a34a;
+}
+
+.tvr-stat-card--absent {
+    border-top: 3px solid #ef4444;
+}
+
+.tvr-stat-card--absent .tvr-stat-card__value {
+    color: #dc2626;
+}
+
+.tvr-stat-card--holiday {
+    border-top: 3px solid #64748b;
+}
+
+.tvr-stat-card--half {
+    border-top: 3px solid #f59e0b;
+}
+
+.tvr-stat-card--holiday .tvr-stat-card__value {
+    color: #475569;
+}
+
+.tvr-stat-card--pct {
+    border-top: 3px solid #f59e0b;
+}
+
+.tvr-stat-card--pct .tvr-stat-card__value {
+    color: #d97706;
+}
+
+/* Attendance Calendar */
+.tvr-cal-header-row,
+.tvr-cal-body {
+    width: 100%;
+}
+
+.tvr-cal-wrapper {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.tvr-cal-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.tvr-cal-top h6 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+}
+
+.tvr-cal-month-select {
+    font-size: 13px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: #334155;
+    background: #f8fafc;
+}
+
+.tvr-cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.tvr-cal-grid__day-header {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    padding: 4px 0;
+}
+
+.tvr-cal-cell {
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #334155;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    min-height: 38px;
+    padding: 4px 2px;
+    cursor: default;
+    transition: transform 0.1s;
+}
+
+.tvr-cal-cell__num {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1;
+}
+
+.tvr-cal-cell__status {
+    font-size: 9px;
+    font-weight: 700;
+    margin-top: 2px;
+    line-height: 1;
+}
+
+.tvr-cal-cell--present {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+
+.tvr-cal-cell--present .tvr-cal-cell__num {
+    color: #15803d;
+}
+
+.tvr-cal-cell--present .tvr-cal-cell__status {
+    color: #16a34a;
+}
+
+.tvr-cal-cell--absent {
+    background: #fef2f2;
+    border-color: #fecaca;
+}
+
+.tvr-cal-cell--absent .tvr-cal-cell__num {
+    color: #dc2626;
+}
+
+.tvr-cal-cell--absent .tvr-cal-cell__status {
+    color: #ef4444;
+}
+
+.tvr-cal-cell--holiday {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+.tvr-cal-cell--holiday .tvr-cal-cell__num {
+    color: #1d4ed8;
+}
+
+.tvr-cal-cell--holiday .tvr-cal-cell__status {
+    color: #2563eb;
+}
+
+
+.tvr-cal-cell--leave {
+    background: #e0e7ff;
+    border-color: #e0e7ff;
+}
+
+.tvr-cal-cell--leave .tvr-cal-cell__num {
+    color: #6366f1;
+}
+
+.tvr-cal-cell--leave .tvr-cal-cell__status {
+    color: #6366f1;
+}
+
+
+.tvr-cal-cell--half {
+    background: #fef9c3;
+    border-color: #fef9c3;
+}
+
+.tvr-cal-cell--half .tvr-cal-cell__num {
+    color: #f59e0b;
+}
+
+.tvr-cal-cell--half .tvr-cal-cell__status {
+    color: #f59e0b;
+}
+
+.tvr-cal-cell--empty {
+    background: #f1f5f9;
+    border-color: #e2e8f0;
+    opacity: 0.4;
+}
+
+/* ── Exam Tab ────────────────────────────────────── */
+.tvr-exam-section {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.tvr-exam-section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: #f8fafc;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.tvr-exam-section__name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+}
+
+.tvr-status-chip {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.tvr-status-chip--completed {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.tvr-status-chip--not-attempted {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.tvr-status-chip--fail {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.tvr-exam-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tvr-exam-table thead th {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eef0f4;
+    background: #fff;
+}
+
+.tvr-exam-table tbody td {
+    font-size: 13px;
+    color: #334155;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f8fafc;
+    vertical-align: middle;
+}
+
+.tvr-exam-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tvr-exam-table tfoot td {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    padding: 12px 20px;
+    background: #f8fafc;
+    border-top: 1px solid #eef0f4;
+}
+
+.tvr-pass-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.tvr-pass-badge--pass {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.tvr-pass-badge--fail {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* Online exams list style */
+.tvr-online-exam-section {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.tvr-online-exam-section__header {
+    padding: 12px 20px;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.tvr-online-exam-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #6c5ce7;
+}
+
+.tvr-online-exam-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    border-bottom: 1px solid #f8fafc;
+    gap: 14px;
+}
+
+.tvr-online-exam-item:last-child {
+    border-bottom: none;
+}
+
+.tvr-online-exam-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #f0edff;
+    color: #6c5ce7;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tvr-online-exam-info {
+    flex: 1;
+}
+
+.tvr-online-exam-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.tvr-online-exam-date {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.tvr-online-exam-result {
+    text-align: right;
+}
+
+.tvr-online-exam-pct {
+    font-size: 15px;
+    font-weight: 700;
+    color: #16a34a;
+}
+
+.tvr-online-exam-grade {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+/* ── Fees Tab ────────────────────────────────────── */
+.tvr-fees-panel {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tvr-fees-panel__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.tvr-fees-panel__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+}
+
+.tvr-fees-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tvr-fees-table thead th {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    padding: 10px 20px;
+    background: #fff;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.tvr-fees-table tbody td {
+    font-size: 13px;
+    color: #334155;
+    padding: 14px 20px;
+    border-bottom: 1px solid #f8fafc;
+    vertical-align: middle;
+}
+
+.tvr-fees-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tvr-fee-name {
+    font-weight: 500;
+    color: #1e293b;
+}
+
+.tvr-fee-type {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+.tvr-fee-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.tvr-fee-badge--paid {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.tvr-fee-badge--partial {
+    background: #fef9c3;
+    color: #a16207;
+}
+
+.tvr-fee-badge--overdue {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.tvr-fee-badge--unpaid {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+/* ── Transportation Tab ──────────────────────────── */
+.tvr-transport-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .tvr-transport-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tvr-transport-panel {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tvr-transport-panel__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    padding: 16px 20px 14px;
+    border-bottom: 1px solid #eef0f4;
+    margin: 0;
+}
+
+.tvr-transport-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f8fafc;
+}
+
+.tvr-transport-row:last-child {
+    border-bottom: none;
+}
+
+.tvr-transport-row__label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    flex-shrink: 0;
+    padding-top: 1px;
+}
+
+.tvr-transport-row__label i {
+    font-size: 12px;
+    color: var(--theme-color);
+}
+
+.tvr-transport-row__value {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1e293b;
+    text-align: right;
+}
+
+/* Route panel – card-row layout */
+.tvr-route-card-row {
+    padding: 14px 20px;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.tvr-route-card-row:last-of-type {
+    border-bottom: none;
+}
+
+.tvr-route-card-row__label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    margin-bottom: 4px;
+}
+
+.tvr-route-card-row__value {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* Half-width cells inside the pickup row */
+.tvr-route-card-half {
+    flex: 1;
+    padding: 14px 20px;
+}
+
+@media (max-width: 576px) {
+    .tvr-route-card-row.d-flex {
+        flex-direction: column;
+    }
+
+    .tvr-route-card-row.d-flex .tvr-route-card-half {
+        border-right: none !important;
+        border-bottom: 1px solid #eef0f4;
+    }
+
+    .tvr-route-card-row.d-flex .tvr-route-card-half:last-child {
+        border-bottom: none;
+    }
+
+    .tvr-route-card-half.d-flex {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+/* Shift Card */
+.tvr-shift-card {
+    background: linear-gradient(135deg, #6c5ce7, #4f46e5);
+    border-radius: 12px;
+    padding: 20px;
+    color: #fff;
+    margin-top: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tvr-shift-card::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.tvr-shift-card__label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 6px;
+}
+
+.tvr-shift-card__name {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.tvr-shift-times {
+    display: flex;
+    gap: 10px;
+}
+
+.tvr-shift-time-pill {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tvr-shift-time-pill span {
+    display: block;
+    font-size: 10px;
+    opacity: 0.7;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+/* Driver / Helper cards */
+.tvr-people-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 16px 20px;
+}
+
+@media (max-width: 576px) {
+    .tvr-people-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tvr-person-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8fafc;
+    border: 1px solid #eef0f4;
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.tvr-person-card__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e8e4ff;
+    flex-shrink: 0;
+}
+
+.tvr-person-card__role {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--theme-color);
+    margin-bottom: 2px;
+}
+
+.tvr-person-card__name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.tvr-person-card__phone {
+    font-size: 11px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ── Month filter in attendance ──────────────────── */
+.tvr-month-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tvr-month-filter label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* ── Loading state ───────────────────────────────── */
+.tvr-loading {
+    text-align: center;
+    padding: 40px;
+    color: #94a3b8;
+}
+
+/* ── No data ─────────────────────────────────────── */
+.tvr-no-data {
+    text-align: center;
+    padding: 40px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* ── General helpers ─────────────────────────────── */
+.tvr-divider {
+    height: 1px;
+    background: #f1f5f9;
+    margin: 0;
+}
+
+.text-green {
+    color: #16a34a;
+}
+
+.text-red {
+    color: #dc2626;
+}
+
+/* ── Modal Styling ───────────────────────────────── */
+.tvr-modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tvr-modal-header {
+    background: #f8fafc;
+    border-bottom: 1px solid #eef0f4;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tvr-modal-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.tvr-modal-close {
+    background: rgba(226, 232, 240, 0.5);
+    border: none;
+    color: #64748b;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tvr-modal-close:hover {
+    background: #cbd5e1;
+    color: #1e293b;
+}
+
+.tvr-modal-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.tvr-modal-table th {
+    background: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #94a3b8;
+    padding: 14px 24px;
+    border-bottom: 2px solid #eef0f4;
+    letter-spacing: 0.5px;
+}
+
+.tvr-modal-table td {
+    padding: 16px 24px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #475569;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+.tvr-modal-table tbody tr:hover td {
+    background-color: #f8fafc;
+}
+
+.tvr-modal-table tfoot th {
+    background: #f8fafc;
+    padding: 16px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    border-top: 2px solid #eef0f4;
+    text-transform: uppercase;
+}
+
+.tvr-modal-total-amt {
+    color: #6c5ce7 !important;
+    font-size: 16px !important;
+}
+
+/* ── Generic Teacher Cards and Tables ── */
+.tvr-card {
+    background: #fff;
+    border: 1px solid #eef0f4 !important;
+    border-radius: 12px;
+}
+
+.tvr-card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+}
+
+.tvr-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tvr-table thead th {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    padding: 10px 20px;
+    background: #f8fafc;
+    border-bottom: 1px solid #eef0f4;
+    border-top: none;
+}
+
+.tvr-table tbody td {
+    font-size: 13px;
+    color: #334155;
+    padding: 14px 20px;
+    border-bottom: 1px solid #f8fafc;
+    vertical-align: middle;
+}
+
+.tvr-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tvr-divider {
+    border-top: 1px solid #f1f5f9;
+}

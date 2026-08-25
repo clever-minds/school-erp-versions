@@ -1,0 +1,134 @@
+/* =============================================
+   Photo Gallery – Responsive Masonry Layout
+   Replaces the NewWaterfall absolute-position plugin.
+   Uses CSS column-count for a native masonry effect.
+   ============================================= */
+
+/* Gallery section spacing */
+.photosGallery.commonMT {
+    padding-bottom: 60px;
+}
+
+/* ----- Masonry Grid Container ----- */
+#waterfall {
+    column-gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    /* Desktop: 3 columns */
+    column-count: 3;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 991px) {
+    #waterfall {
+        column-count: 2;
+    }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 575px) {
+    #waterfall {
+        column-count: 1;
+    }
+}
+
+/* ----- Individual Gallery Item ----- */
+#waterfall li {
+    /* Critical: prevent items from being split across columns */
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+
+    display: inline-block; /* fallback for column-count break-inside */
+    width: 100%;
+    margin-bottom: 16px;
+
+    /* Reset any leftover waterfall plugin styles */
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Show animation handled via class – keep items always visible in this layout */
+#waterfall li.show {
+    opacity: 1;
+    transform: none;
+    transition: none;
+}
+
+/* ----- Card Wrapper ----- */
+#waterfall li > div.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    margin: 0;
+}
+
+#waterfall li > div.gallery-card:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
+    transform: translateY(-4px);
+}
+
+/* ----- Thumbnail Image ----- */
+#waterfall li > div.gallery-card img.thumbnail {
+    display: block;
+    width: 100%;
+    height: auto;          /* fluid height – no fixed pixels */
+    aspect-ratio: unset;   /* let the image determine row height */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+#waterfall li > div.gallery-card:hover img.thumbnail {
+    transform: scale(1.04);
+    opacity: 0.88;
+}
+
+/* ----- Overlay Arrow Icon ----- */
+#waterfall li > div.gallery-card .detailArr {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+    border-radius: 10px;
+}
+
+#waterfall li > div.gallery-card:hover .detailArr {
+    background: rgba(0, 0, 0, 0.30);
+}
+
+#waterfall li > div.gallery-card .detailArr img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#waterfall li > div.gallery-card:hover .detailArr img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ----- No Data State ----- */
+.photosGallery .flex_column_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}

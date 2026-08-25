@@ -1,0 +1,236 @@
+/* ===================================================
+   Shared Attendance UI Components
+   =================================================== */
+
+/* ── Stat Cards Data ── */
+.attendance-stat-card {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.attendance-stat-card__label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+}
+
+.attendance-stat-card__value {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.attendance-stat-card--total {
+    border-top: 3px solid var(--theme-color);
+}
+.attendance-stat-card--total .attendance-stat-card__value {
+    color: var(--theme-color);
+}
+
+.attendance-stat-card--present {
+    border-top: 3px solid #22c55e;
+}
+.attendance-stat-card--present .attendance-stat-card__value {
+    color: #16a34a;
+}
+
+.attendance-stat-card--absent {
+    border-top: 3px solid #ef4444;
+}
+.attendance-stat-card--absent .attendance-stat-card__value {
+    color: #dc2626;
+}
+
+.attendance-stat-card--holiday {
+    border-top: 3px solid #64748b;
+}
+.attendance-stat-card--holiday .attendance-stat-card__value {
+    color: #475569;
+}
+
+.attendance-stat-card--half {
+    border-top: 3px solid #f59e0b;
+}
+
+.attendance-stat-card--pct {
+    border-top: 3px solid #f59e0b;
+}
+
+.attendance-stat-card--pct .attendance-stat-card__value {
+    color: #d97706;
+}
+
+
+/* ── Attendance Calendar Container ── */
+.attendance-cal-wrapper {
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.attendance-cal-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.attendance-cal-top h6 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+}
+
+.attendance-month-filter {
+    display: flex; 
+    gap: 10px; 
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.attendance-cal-month-select {
+    font-size: 13px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: #334155;
+    background: #f8fafc;
+    font-weight: 600;
+}
+
+/* ── Calendar Grid ── */
+.attendance-cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.attendance-cal-grid__day-header {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    padding: 4px 0;
+}
+
+.attendance-cal-cell {
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #334155;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    min-height: 38px;
+    padding: 4px 2px;
+    cursor: default;
+    transition: transform 0.1s;
+}
+
+.attendance-cal-cell__num {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1;
+}
+
+.attendance-cal-cell__status {
+    font-size: 9px;
+    font-weight: 700;
+    margin-top: 2px;
+    line-height: 1;
+}
+
+/* ── Cell Modifiers ── */
+.attendance-cal-cell--present {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+.attendance-cal-cell--present .attendance-cal-cell__num {
+    color: #15803d;
+}
+.attendance-cal-cell--present .attendance-cal-cell__status {
+    color: #16a34a;
+}
+
+.attendance-cal-cell--absent {
+    background: #fef2f2;
+    border-color: #fecaca;
+}
+.attendance-cal-cell--absent .attendance-cal-cell__num {
+    color: #dc2626;
+}
+.attendance-cal-cell--absent .attendance-cal-cell__status {
+    color: #ef4444;
+}
+
+.attendance-cal-cell--holiday {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+.attendance-cal-cell--holiday .attendance-cal-cell__num {
+    color: #1d4ed8;
+}
+.attendance-cal-cell--holiday .attendance-cal-cell__status {
+    color: #2563eb;
+}
+
+.attendance-cal-cell--leave {
+    background: #e0e7ff;
+    border-color: #e0e7ff;
+}
+.attendance-cal-cell--leave .attendance-cal-cell__num {
+    color: #6366f1;
+}
+.attendance-cal-cell--leave .attendance-cal-cell__status {
+    color: #6366f1;
+}
+
+.attendance-cal-cell--half {
+    background: #fef9c3;
+    border-color: #fef9c3;
+}
+.attendance-cal-cell--half .attendance-cal-cell__num {
+    color: #f59e0b;
+}
+.attendance-cal-cell--half .attendance-cal-cell__status {
+    color: #f59e0b;
+}
+
+.attendance-cal-cell--empty {
+    background: #f1f5f9;
+    border-color: #e2e8f0;
+    opacity: 0.4;
+}
+
+/* ── Responsive Adjustments ── */
+@media (max-width: 576px) {
+    .attendance-cal-grid {
+        gap: 2px;
+    }
+    .attendance-cal-cell {
+        min-height: 32px;
+    }
+    .attendance-cal-cell__num {
+        font-size: 11px;
+    }
+    .attendance-cal-cell__status {
+        font-size: 8px;
+    }
+}
