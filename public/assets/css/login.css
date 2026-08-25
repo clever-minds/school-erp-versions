@@ -1,0 +1,442 @@
+/* =========================================================
+   Login Page – Custom Stylesheet
+   Matches the reference design: white form panel (left) + 
+   immersive photo/brand panel (right).
+   Bootstrap 5 is the primary layout engine; this file fills
+   the gaps Bootstrap cannot cover alone.
+   ========================================================= */
+
+
+
+/* ---------- Global reset for this page ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #fff;
+    color: var(--lp-text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   LAYOUT – two equal columns filling the viewport
+   ========================================================= */
+.lp-wrapper {
+    display: flex;
+    height: 100vh;
+    min-height: 600px;
+}
+
+/* ---------- LEFT – form column ---------- */
+.lp-form-col {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 48px 40px;
+    background: #fff;
+    overflow-y: auto;
+    justify-content: space-around;
+}
+
+.lp-form-inner {
+    width: 100%;
+    max-width: 420px;
+    padding-top: 20px;
+}
+
+/* ---------- RIGHT – brand / photo column ---------- */
+.lp-brand-col {
+    width: 50%;
+    background-color: #0d2b2a;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Background image set inline via blade (style attribute) */
+
+/* =========================================================
+   FORM COLUMN – content
+   ========================================================= */
+
+/* Heading */
+.lp-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--lp-text-main);
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.lp-subheading {
+    font-size: 0.875rem;
+    color: var(--lp-text-muted);
+    margin-bottom: 32px;
+}
+
+/* Labels */
+.lp-label {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--lp-text-main);
+    margin-bottom: 6px;
+}
+
+/* Input group wrapper */
+.lp-input-group {
+    margin-bottom: 18px;
+}
+
+.lp-input-wrapper {
+    position: relative;
+}
+
+/* Icon prefix */
+.lp-input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b0bac8;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Eye toggle */
+.lp-pw-toggle {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b0bac8;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 3;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.lp-pw-toggle:hover {
+    color: var(--lp-primary);
+}
+
+/* Form controls */
+.lp-input {
+    width: 100%;
+    height: 46px;
+    padding: 0 40px 0 40px;
+    border: 1.5px solid var(--lp-border);
+    border-radius: var(--lp-radius);
+    font-size: 0.875rem;
+    color: var(--lp-text-main);
+    background: var(--lp-bg-input);
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    outline: none;
+}
+
+.lp-input::placeholder {
+    color: #c2c9d6;
+}
+
+.lp-input:focus {
+    border-color: var(--lp-primary);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(23, 201, 162, 0.12);
+}
+
+/* School Code row – label + what's this link */
+.lp-school-code-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.lp-whats-this {
+    font-size: 0.75rem;
+    color: var(--lp-primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.lp-whats-this:hover {
+    text-decoration: underline;
+}
+
+/* Forgot password */
+.lp-forgot {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.lp-forgot a {
+    font-size: 0.8125rem;
+    color: var(--lp-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.lp-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Sign In button */
+.lp-btn-signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 48px;
+    background: var(--lp-primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--lp-radius);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--lp-shadow-btn);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+    letter-spacing: 0.01em;
+}
+
+.lp-btn-signin:hover {
+    background: var(--theme-color);
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
+.lp-btn-signin:active {
+    transform: translateY(0);
+}
+
+/* Signup link below button */
+.lp-signup-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 0.8125rem;
+    color: var(--lp-text-muted);
+}
+
+.lp-signup-link a {
+    color: var(--lp-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.lp-signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Alerts */
+.lp-alert {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    margin-bottom: 18px;
+}
+
+.lp-alert-success {
+    background: #e6faf5;
+    border: 1px solid #a3e9d5;
+    color: #0a6644;
+}
+
+.lp-alert-danger {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}
+
+/* =========================================================
+   DEMO CREDENTIALS SECTION
+   ========================================================= */
+.lp-demo-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 22px 0 14px;
+    color: #aab0bc;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.lp-demo-divider::before,
+.lp-demo-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--lp-border);
+}
+
+.lp-demo-group-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #9aa0ad;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.lp-demo-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.lp-demo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1.5px solid;
+    background: #fff;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+
+/* Super Admin – teal outline */
+.lp-demo-btn-teal {
+    border-color: var(--lp-primary);
+    color: #0b8c6e;
+}
+
+.lp-demo-btn-teal:hover {
+    background: rgba(23, 201, 162, 0.08);
+}
+
+/* Staff Global – indigo outline */
+.lp-demo-btn-indigo {
+    border-color: #8b80f8;
+    color: #5c52d3;
+}
+
+.lp-demo-btn-indigo:hover {
+    background: rgba(139, 128, 248, 0.08);
+}
+
+/* School Admin – light teal */
+.lp-demo-btn-admin {
+    border-color: #82e0cc;
+    color: #0b8c6e;
+}
+
+.lp-demo-btn-admin:hover {
+    background: rgba(130, 224, 204, 0.12);
+}
+
+/* Teacher – red/coral outline */
+.lp-demo-btn-teacher {
+    border-color: #f87171;
+    color: #b91c1c;
+}
+
+.lp-demo-btn-teacher:hover {
+    background: rgba(248, 113, 113, 0.08);
+}
+
+/* Staff – blue outline */
+.lp-demo-btn-staff {
+    border-color: #60a5fa;
+    color: #1d4ed8;
+}
+
+.lp-demo-btn-staff:hover {
+    background: rgba(96, 165, 250, 0.08);
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+/* Tablet (≤ 991px) – stack vertically, form below brand */
+@media (max-width: 991.98px) {
+    .lp-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .lp-form-col,
+    .lp-brand-col {
+        width: 100%;
+    }
+
+    .lp-brand-col {
+        min-height: 280px;
+    }
+
+    .lp-form-col {
+        padding: 36px 24px;
+        align-items: flex-start;
+    }
+}
+
+/* Mobile (≤ 575px) */
+@media (max-width: 575.98px) {
+    .lp-brand-col {
+        min-height: 220px;
+    }
+
+    .lp-form-col {
+        padding: 28px 16px;
+    }
+
+    .lp-form-inner {
+        max-width: 100%;
+        padding-top: 0;
+    }
+
+    .lp-heading {
+        font-size: 1.6rem;
+    }
+
+    .lp-demo-btns {
+        gap: 6px;
+    }
+
+    .lp-demo-btn {
+        padding: 5px 12px;
+        font-size: 0.73rem;
+    }
+}
+
+/* Landscape mobile – override to side-by-side layout */
+@media (max-height: 560px) and (orientation: landscape) {
+    .lp-wrapper {
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    .lp-form-col,
+    .lp-brand-col {
+        width: 50%;
+        height: 100%;
+    }
+
+    .lp-brand-col {
+        min-height: auto;
+    }
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+}
