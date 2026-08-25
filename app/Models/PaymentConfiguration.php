@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class PaymentConfiguration extends Model
+{
+    use HasFactory;
+    protected $fillable = [
+        'payment_method',
+        'api_key',
+        'secret_key',
+        'webhook_secret_key',
+        'status',
+        'currency_code',
+        'currency_symbol',
+        'school_id',
+    ];
+
+    public function scopeOwner($query)
+    {
+        if(Auth::user()){
+            if (Auth::user()->hasRole('Super Admin')) {
+                return $query;
+            }
+
+            if (Auth::user()->hasRole('School Admin')) {
+                return $query->where('school_id', Auth::user()->school_id);
+            }
+
+            if (Auth::user()->hasRole('Student')) {
+                return $query->where('school_id', Auth::user()->school_id);
+            }
+        }
+
+        return $query;
+    }
+}
