@@ -1,0 +1,372 @@
+/* Subscription Page Modern UI Styles */
+
+.sub-card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    background: #fff;
+    transition: all 0.3s ease;
+    margin-bottom: 24px;
+}
+
+.sub-card-body {
+    padding: 1.5rem;
+}
+
+/* Metric Cards */
+.metric-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.metric-info h6 {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.metric-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 0.25rem;
+}
+
+.metric-info .subtext {
+    font-size: 0.75rem;
+    color: #adb5bd;
+}
+
+.metric-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.icon-green {
+    background: #ebfbee;
+    color: #40c057;
+}
+
+.icon-blue {
+    background: #e7f5ff;
+    color: #228be6;
+}
+
+.icon-orange {
+    background: #fff4e6;
+    color: #fd7e14;
+}
+
+/* Active Plan Section */
+.plan-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed #e9ecef;
+    margin-bottom: 1.5rem;
+}
+
+.plan-title-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.plan-shield-icon {
+    width: 40px;
+    height: 40px;
+    background: #f0f4ff;
+    color: #4c6ef5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+
+.plan-title h4 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.plan-title p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.module-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.module-item i {
+    color: #40c057;
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.addon-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.addon-badge {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #495057;
+    display: flex;
+    align-items: center;
+}
+
+.addon-badge i {
+    margin-right: 0.4rem;
+    color: #7048e8;
+}
+
+/* Upcoming Changes */
+.upcoming-card {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    position: relative;
+    overflow: hidden;
+}
+
+.planned-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fd7e14;
+    color: #fff;
+    padding: 2px 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-bottom-left-radius: 8px;
+    text-transform: uppercase;
+}
+
+.new-plan-block {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.new-plan-block span {
+    display: block;
+    font-size: 0.75rem;
+    color: #868e96;
+    margin-bottom: 0.25rem;
+}
+
+.new-plan-block strong {
+    font-size: 1rem;
+    color: #343a40;
+}
+
+/* Table Enhancements */
+.sub-table thead th {
+    background: #f8f9fa;
+    border-top: none;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #868e96;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.sub-table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.total-row {
+    background: #f8f9fa;
+    font-weight: 700;
+}
+
+.total-amount {
+    font-size: 1.1rem;
+    color: #4c6ef5;
+}
+
+/* Utils */
+.text-muted-small {
+    font-size: 0.75rem;
+    color: #868e96;
+}
+
+.btn-upgrade {
+    background: #7048e8;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-upgrade:hover {
+    background: #5f3dc4;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* Modal Enhancements */
+.modal-table th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.modal-table td {
+    vertical-align: middle;
+}
+
+.bg-light-primary {
+    background-color: #f0f4ff !important;
+}
+
+.modal-title-content .modal-title {
+    font-weight: 700;
+    color: #2b3a4a;
+}
+
+.badge-success-outline {
+    border: 1px solid #40c057;
+    color: #40c057;
+    background: #ebfbee;
+}
+
+.badge-outline-dark {
+    border: 1px solid #343a40;
+    color: #343a40;
+    background: transparent;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+/* Responsive Table scrollbar */
+.table-responsive::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #dee2e6;
+    border-radius: 10px;
+}
+/* Progress Visualization Styles */
+.metric-card {
+    flex-wrap: wrap;
+}
+
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.circular-progress-wrapper {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: conic-gradient(var(--progress-color, #f1f3f5) calc(var(--percentage, 0) * 1%), #f1f3f5 0);
+    transition: background 0.3s ease;
+}
+
+.circular-progress-wrapper .metric-icon {
+    width: 44px;
+    height: 44px;
+    background: #fff !important;
+    margin: 0 !important;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.icon-inner-bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* Status Colors */
+.status-normal { --progress-color: #40c057; }
+.status-warning { --progress-color: #fd7e14; }
+.status-critical { --progress-color: #fa5252; }
+
+/* Horizontal Progress Bar */
+.progress-container {
+    margin-top: 1.25rem;
+    width: 100%;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    margin-bottom: 0.35rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.sub-progress {
+    height: 6px;
+    border-radius: 10px;
+    background: #f1f3f5;
+    overflow: hidden;
+}
+
+.sub-progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    background: var(--progress-color, #4c6ef5);
+    transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Postpaid / Default states */
+.icon-purple-bg { background: #f3f0ff; color: #7048e8; }
+.icon-green-bg { background: #ebfbee; color: #40c057; }
+.icon-blue-bg { background: #e7f5ff; color: #228be6; }
+.icon-orange-bg { background: #fff4e6; color: #fd7e14; }

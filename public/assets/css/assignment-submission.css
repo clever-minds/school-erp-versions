@@ -1,0 +1,272 @@
+/* Assignment Submission Modal Redesign */
+
+#editModal .modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#editModal .modal-header {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1.5rem;
+}
+
+#editModal .modal-title {
+    font-weight: 700;
+    color: #333;
+}
+
+#editModal .modal-subtitle {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+}
+
+#editModal .modal-body {
+    padding: 1.5rem;
+    background-color: #fff;
+}
+
+#editModal .left-panel {
+    padding-right: 1.5rem;
+}
+
+#editModal .right-panel {
+    background-color: #f8fafc;
+    border-left: 1px solid #f0f0f0;
+    padding: 1.5rem;
+    height: 100%;
+}
+
+/* Student Profile Card */
+.student-profile-card {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.student-avatar-circle {
+    width: 48px;
+    height: 48px;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+}
+
+.student-info h6 {
+    margin: 0;
+    font-weight: 700;
+    color: #333;
+}
+
+.student-meta {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    margin-right: 0.5rem;
+}
+
+/* File Cards */
+.file-item-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.file-item-card:hover {
+    background-color: #f8fafc;
+}
+
+.file-icon {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin-right: 1rem;
+}
+
+.file-details {
+    flex-grow: 1;
+}
+
+.file-name {
+    display: block;
+    font-weight: 600;
+    color: #334155;
+    font-size: 0.875rem;
+    text-decoration: none !important;
+}
+
+.file-size {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.file-download {
+    color: #94a3b8;
+}
+
+/* Submission Link */
+.submission-link-container {
+    background: #fff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.submission-link-container a {
+    color: #4361ee;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+/* Custom Status Buttons */
+.status-buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.status-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.status-btn i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.status-btn span {
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+/* Accept State */
+input.edit-status[value="1"]:checked+.status-btn {
+    border-color: #4361ee;
+    background-color: rgba(67, 97, 238, 0.05);
+    color: #4361ee;
+}
+
+/* Reject State */
+input.edit-status[value="2"]:checked+.status-btn {
+    border-color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.05);
+    color: #ef4444;
+}
+
+.status-btn:hover {
+    border-color: #94a3b8;
+}
+
+/* Grade Points Input Group */
+.grade-points-group {
+    position: relative;
+}
+
+.grade-points-group .max-label {
+    position: absolute;
+    right: 0;
+    top: -1.75rem;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.grade-points-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.grade-points-input-wrapper .form-control {
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding-right: 3.5rem;
+    height: 3rem;
+    border-radius: 8px;
+}
+
+.grade-points-input-wrapper .pts-suffix {
+    position: absolute;
+    right: 1rem;
+    font-weight: 700;
+    color: #94a3b8;
+}
+
+/* Feedback Textarea */
+.feedback-textarea {
+    border-radius: 8px;
+    padding: 1rem;
+    min-height: 120px;
+    resize: none;
+}
+
+/* Footer Buttons */
+.modal-footer {
+    border-top: 1px solid #f0f0f0;
+    padding: 1.5rem;
+}
+
+.btn-cancel {
+    background: transparent;
+    border: none;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.btn-submit-review {
+    background: #4361ee;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(67, 97, 238, 0.2);
+}
+
+.btn-submit-review:hover {
+    background: #3751d7;
+}
+
+@media (max-width: 768px) {
+    #editModal .right-panel {
+        border-left: none;
+        border-top: 1px solid #f0f0f0;
+        margin-top: 1.5rem;
+    }
+}

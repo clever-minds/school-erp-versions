@@ -1,0 +1,153 @@
+/* ==================================================
+   Certificate Assignment Module - Custom CSS
+   ================================================== */
+
+/* ---- Page Header ---- */
+.ca-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+/* ---- Tab Pills ---- */
+.ca-tabs {
+    display: flex;
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 4px;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+.ca-tab-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.ca-tab-btn.active {
+    background: #fff;
+    color: #2563eb;
+    box-shadow: 0 1px 4px rgba(0,0,0,.12);
+}
+
+/* ---- Filter Bar ---- */
+.ca-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-end;
+    padding: 16px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.ca-filter-bar .form-group {
+    margin-bottom: 0;
+    flex: 1;
+    min-width: 180px;
+}
+.ca-filter-bar label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* ---- Issued At bar ---- */
+.ca-date-bar {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+.ca-date-bar .form-group { margin-bottom: 0; min-width: 200px; }
+.ca-date-bar label { font-size: 12px; font-weight: 600; color: #374151; display: block; margin-bottom: 4px; }
+
+/* ---- Badge indicating already assigned ---- */
+.badge-assigned {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #dcfce7;
+    color: #16a34a;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.badge-pending {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #fef3c7;
+    color: #d97706;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* ---- User Avatar ---- */
+.ca-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e5e7eb;
+}
+
+/* ---- Action Buttons ---- */
+.ca-assign-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+}
+.ca-selection-info {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1d4ed8;
+}
+.ca-assign-bar .btn { font-size: 13px; }
+
+/* ---- History Tab ---- */
+.history-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ---- Revoke button ---- */
+.btn-revoke {
+    background: #fee2e2;
+    border: none;
+    color: #dc2626;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-revoke:hover { background: #fecaca; }
+
+/* ---- Responsive ---- */
+@media (max-width: 576px) {
+    .ca-filter-bar .form-group { min-width: 100%; }
+    .ca-assign-bar { flex-direction: column; align-items: flex-start; }
+    .ca-tabs { flex-direction: column; }
+}

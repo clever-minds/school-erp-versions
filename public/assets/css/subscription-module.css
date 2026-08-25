@@ -1,0 +1,656 @@
+/* 
+ * Subscription Module Styles
+ * Rich Aesthetics, Modern Gradients, Clean Cards
+ */
+
+.sub-module-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.sub-metric-title {
+    color: #6c757d;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.sub-metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 4px;
+}
+
+.sub-metric-subtitle {
+    font-size: 0.85rem;
+    color: #28a745;
+    font-weight: 600;
+}
+
+/* Gradient Cards */
+.sub-gradient-primary {
+    background: linear-gradient(135deg, #5144f8 0%, #463bf0 100%);
+    color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(81, 68, 248, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add glassmorphism element inside gradient */
+.sub-gradient-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    transform: translate(30%, -30%);
+    border-radius: 50%;
+}
+
+.sub-gradient-primary .sub-metric-title {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.sub-gradient-primary .sub-metric-value {
+    color: #ffffff;
+}
+
+/* Table Enhancements */
+.sub-table-wrapper .table {
+    margin-top: -10px;
+}
+
+.sub-table-wrapper .table thead th {
+    color: #6c757d;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: 0;
+}
+
+.sub-table-wrapper .table tbody tr {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.sub-table-wrapper .table tbody tr:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+    position: relative;
+    z-index: 99;
+}
+
+.sub-table-wrapper .table tbody tr:focus-within {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+    position: relative;
+    z-index: 100 !important;
+}
+
+.sub-table-wrapper .table tbody td {
+    vertical-align: middle;
+}
+
+/* Specific elements */
+.school-logo-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #5144f8;
+    overflow: hidden;
+}
+
+.school-logo-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sub-btn-view {
+    background-color: #5144f8;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.sub-btn-view:hover {
+    background-color: #463bf0;
+    color: white;
+}
+
+.sub-avatar-large {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    color: #5144f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+.sub-dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-search-input {
+    border-radius: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 8px 16px 8px 40px;
+}
+
+/* ── Plan-type badges (shown inside gradient card) ── */
+.sub-badge-prepaid {
+    background-color: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.sub-badge-postpaid {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.45);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* ── Additional subscription status badges ── */
+
+
+/* ── School Summary Card layout helpers ── */
+.school-summary-card {
+    text-align: center;
+}
+
+.school-details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.school-details-list li {
+    margin-bottom: 16px;
+}
+
+.school-details-list li label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.school-details-list li strong {
+    font-size: 0.95rem;
+    color: #343a40;
+}
+
+.action-button-full {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #f0f0ff;
+    color: #5144f8;
+    text-align: center;
+    padding: 12px;
+    margin-top: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.action-button-full:hover {
+    background-color: #e0e0ff;
+    color: #5144f8;
+}
+
+/* ── History table header row ── */
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* ── Action dropdown z-index fix inside table ── */
+.sub-table-wrapper .table tbody tr:focus-within,
+.sub-table-wrapper .dropdown.show {
+    z-index: 200 !important;
+}
+
+.sub-table-wrapper .dropdown-menu {
+    z-index: 1055;
+}
+
+/* ── View Subscription Details Modal UI ── */
+.vs-modal-header {
+    border-bottom: 1px solid #e9ecef;
+    padding: 20px 24px;
+}
+
+.vs-header-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #f0f0ff;
+    color: var(--theme-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-right: 16px;
+}
+
+.vs-subtitle {
+    font-size: 0.75rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.vs-info-block {
+    padding: 20px 24px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.vs-info-label {
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.vs-info-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.vs-nav-tabs {
+    border-bottom: 1px solid #e9ecef;
+    padding: 0 24px;
+}
+
+.vs-nav-tabs .nav-link {
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #6c757d;
+    font-weight: 600;
+    padding: 12px 16px;
+    background: transparent;
+}
+
+.vs-nav-tabs .nav-link.active {
+    color: var(--theme-color);
+    border-bottom-color: var(--theme-color);
+}
+
+.vs-tab-content {
+    padding: 24px;
+}
+
+.vs-section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.vs-section-subtitle {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.vs-feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.vs-feature-card {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+
+.vs-feature-card:hover {
+    border-color: var(--theme-color);
+    box-shadow: 0 4px 12px rgba(var(--theme-color), 0.08);
+}
+
+.vs-feature-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.vs-feature-name {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+    flex: 1;
+}
+
+.vs-btn-delete {
+    color: #dee2e6;
+    background: transparent;
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vs-feature-card:hover .vs-btn-delete {
+    color: #adb5bd;
+}
+
+.vs-btn-delete:hover {
+    color: #dc3545 !important;
+    background-color: #fff5f5;
+}
+
+.vs-btn-add {
+    background-color: #5144f8;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: background-color 0.2s;
+}
+
+.vs-btn-add:hover {
+    background-color: #463bf0;
+    color: #fff;
+}
+
+.vs-btn-add-outline {
+    background-color: transparent;
+    color: #5144f8;
+    border: 1px solid #5144f8;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.vs-btn-add-outline:hover {
+    background-color: #f0f0ff;
+}
+
+.vs-addon-table {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.vs-addon-table table {
+    margin-bottom: 0;
+}
+
+.vs-addon-table th {
+    background-color: #f8f9fa;
+    border-top: none;
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 12px 16px;
+}
+
+.vs-addon-table td {
+    padding: 16px;
+    vertical-align: middle;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.vs-warning-note {
+    background-color: #fff9e6;
+    border: 1px solid #ffe8a1;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #b07d00;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.vs-warning-note i {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    color: #ffb822;
+}
+
+.vs-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-top: 1px solid #e9ecef;
+}
+
+.vs-footer-text {
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+}
+
+.vs-btn-cancel {
+    color: #333;
+    font-weight: 600;
+    background: transparent;
+    border: none;
+    padding: 8px 16px;
+}
+
+.vs-btn-save {
+    background-color: #1e293b;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 8px 24px;
+    border: none;
+}
+
+.vs-badge-active {
+    background-color: #eef2ff;
+    color: #5144f8;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    margin-left: 8px;
+    text-transform: uppercase;
+}
+
+.vs-badge-status-green {
+    color: #198754;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.vs-badge-status-green i {
+    margin-right: 6px;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: transparent !important;
+}
+
+/* Custom Dropdown for Features/Addons */
+.vs-dropdown-menu {
+    width: 350px;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    right: 0;
+    left: auto;
+}
+.vs-dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.vs-dropdown-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #333;
+}
+.vs-search-input {
+    border-radius: 8px;
+    border: 1px solid #5144f8;
+    padding: 8px 12px 8px 36px;
+    font-size: 0.85rem;
+    width: 100%;
+}
+.vs-search-input:focus {
+    box-shadow: none;
+    border-color: #5144f8;
+    outline: none;
+}
+.vs-search-wrapper {
+    position: relative;
+    margin-bottom: 12px;
+}
+.vs-search-wrapper i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #adb5bd;
+    font-size: 0.9rem;
+}
+.vs-dropdown-list {
+    max-height: 250px;
+    overflow-y: auto;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+.vs-dropdown-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f3f5;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.vs-dropdown-item:last-child {
+    border-bottom: none;
+}
+.vs-dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+.vs-dropdown-item-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2px;
+}
+.vs-dropdown-item-subtitle {
+    font-size: 0.7rem;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* ── Responsive Adjustments ── */
+@media (max-width: 768px) {
+    .vs-nav-tabs .nav-link {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+    .vs-section-title {
+        font-size: 1rem;
+    }
+    .vs-dropdown-menu {
+        width: 100%;
+        max-width: 320px;
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .vs-info-label {
+        font-size: 0.65rem;
+    }
+    .vs-info-value {
+        font-size: 0.85rem;
+    }
+    .vs-feature-name {
+        font-size: 0.85rem;
+    }
+    .vs-tab-content {
+        padding: 16px;
+    }
+}

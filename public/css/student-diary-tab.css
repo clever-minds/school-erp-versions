@@ -1,0 +1,31 @@
+/* Diary Tab Custom Styles */
+
+/* Base Card structure */
+.diary-card { border: 1px solid #e2e8f0 !important; border-radius: 8px !important; overflow: hidden; background: #fff; margin-bottom: 20px;}
+.diary-card .card-body { padding: 1.25rem; }
+
+/* Status Left Borders */
+.diary-card.border-left-success { border-left: 4px solid #10b981 !important; }
+.diary-card.border-left-danger { border-left: 4px solid #ef4444 !important; }
+.diary-card.border-left-primary { border-left: 4px solid #6366f1 !important; }
+
+/* Soft Badges */
+.badge-soft-success { background-color: #d1fae5; color: #10b981; border: 1px solid #a7f3d0; font-weight: 500; }
+.badge-soft-danger { background-color: #fee2e2; color: #ef4444; border: 1px solid #fecaca; font-weight: 500; }
+.badge-soft-primary { background-color: #e0e7ff; color: #6366f1; border: 1px solid #c7d2fe; font-weight: 500; }
+
+/* Pill Badges overrides for subjects */
+.badge-pill.bg-light { background-color: #f1f5f9 !important; color: #64748b; font-size: 0.75rem; font-weight: 500; padding: 0.4em 0.8em; }
+
+/* Font size tweaks */
+.text-light-gray { color: #94a3b8; }
+.diary-card-date { color: #64748b; font-size: 0.85rem; margin-top: 10px; display: block;}
+.diary-card-title { font-size: 1.15rem; font-weight: bold; color: #1e293b; margin-bottom: 8px;}
+.diary-card-desc { font-size: 0.95rem; color: #475569; line-height: 1.6; }
+.diary-card-meta { font-size: 0.75rem; font-weight: 600; color: #94a3b8; letter-spacing: 0.5px;}
+.diary-card-author { font-size: 0.8rem; color: #64748b;}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+    .diary-card-left { margin-bottom: 15px; }
+}
