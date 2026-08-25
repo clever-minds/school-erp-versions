@@ -1,0 +1,43 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    <IfModule mod_headers.c>
+        # Allow specific origins only
+
+        Header always set Access-Control-Allow-Origin "*"
+        Header always set Access-Control-Allow-Credentials "true"
+        Header always set Access-Control-Allow-Methods "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+        Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With, Accept, Cache-Control, school-code"
+    </IfModule>
+
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+    RewriteRule ^(.*)$ public/$1 [L]
+    # Pass custom header
+    RewriteCond %{HTTP:school-code} ^(.*)
+    RewriteRule .* - [E=HTTP_SCHOOL_CODE:%1]
+
+    # Handle Authorization header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect trailing slashes
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Front controller
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Allow images to be loaded from any origin — without affecting API responses
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg)$">
+        Header always set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
